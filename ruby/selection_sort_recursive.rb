@@ -1,5 +1,12 @@
 def selection_sort_recursive(arr)
-  # type your code in here
+  return [] if arr.count === 0
+
+  min = arr.min
+  i = arr.index(min)
+  arr.delete_at(i)
+
+  result = selection_sort_recursive(arr)
+  result.unshift(min)
 end
 
 if __FILE__ == $PROGRAM_NAME
